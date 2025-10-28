@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SolvIT</title>
+
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">SolvIT</div>
+
+      <div class="top-actions">
+        <span class="small" id="helloText">Salam, qonaq</span>
+        <div class="avatar" id="avatar">S</div>
+        <button class="icon-btn" id="loginBtn">Daxil ol</button>
+        <button class="icon-btn" id="registerBtn">Qeydiyyat</button>
+
+         <!-- profil klik menyusu -->
+      <div class="profile-menu hidden" id="profileMenu">
+        <button class="icon-btn" id="logoutBtn">Çıxış</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- Problem yaz + şəkil + göndər -->
+    <div class="search-bar">
+      <input id="problemInput" placeholder="Problemi təsvir edin..." />
+      <div class="circle" id="addImageBtn">+</div>
+      <input type="file" id="imageInput" accept="image/*" class="hidden" multiple>
+      <button class="send" id="sendBtn">Göndər</button>
+    </div>
+    <div id="imagePreviewContainer" class="preview-container"></div>
+
+
+    <div id="tagArea" class="small hidden">Etiketləyin: <span class="link" id="tagSuggestions">@Nigar, @Tural, @Elvin...</span></div>
+
+    <!-- Tablar -->
+    <div class="tabs">
+      <div class="tab active" data-filter="all">Hamısı <span id="countAll" class="small"></span></div>
+      <div class="tab" data-filter="solved">Həll edilib <span id="countSolved" class="small"></span></div>
+      <div class="tab" data-filter="progress">Prosesdədir <span id="countProgress" class="small"></span></div>
+      <div class="tab" data-filter="unsolved">Həll olunmayıb <span id="countUnsolved" class="small"></span></div>
+    </div>
+
+    <!-- Siyahı -->
+    <div id="list"></div>
+  </div>
+
+  <!-- Qeydiyyat Modal -->
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal">
+      <h3>Qeydiyyat / Daxil ol</h3>
+      <p class="small">SolvIT-də problem yerləşdirmək üçün qeydiyyat mütləqdir.</p>
+      <input id="fullName" placeholder="Ad, Soyad" />
+
+<input id="email" placeholder="Universitet e-poçtu (example@karabakh.edu.az)" />
+
+<input id="role" placeholder="Rolunuz (məs: tələbə, müəllim, digər)" />
+
+
+      <div class="actions">
+        <button class="icon-btn" id="authClose">Bağla</button>
+        <button class="icon-btn primary" id="authSave">Təsdiqlə</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="notifications.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
